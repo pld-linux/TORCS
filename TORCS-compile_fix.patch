@@ -1,0 +1,21 @@
+diff -urN aaa/torcs-1.2.1/src/drivers/K1999/K1999.cpp torcs-1.2.1/src/drivers/K1999/K1999.cpp
+--- aaa/torcs-1.2.1/src/drivers/K1999/K1999.cpp	2003-04-19 11:48:14.000000000 +0200
++++ torcs-1.2.1/src/drivers/K1999/K1999.cpp	2003-07-10 16:32:13.000000000 +0200
+@@ -14,7 +14,7 @@
+ ////////////////////////////////////////////////////////////////////////////
+ #include <iostream.h>
+ #ifndef WIN32
+-#include <strstream.h>
++#include <strstream>
+ #endif
+ #include <iomanip.h>
+ #include <math.h>
+@@ -515,7 +515,7 @@
+  OUTPUT("initTrack(" << index << ")");
+  char szSettings[100];
+ #ifndef WIN32
+- ostrstream os(szSettings, sizeof(szSettings));
++ std::ostrstream os(szSettings, sizeof(szSettings));
+  os << "drivers/K1999/" << index << "/settings.xml" << ends;
+ #else
+  sprintf(szSettings, "drivers/K1999/%d/settings.xml", index);
