@@ -20,7 +20,7 @@ Source6:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-extra.tgz
 Source7:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-Patwo-Design.tgz
 Patch0:		%{name}-inc.patch
 URL:		http://torcs.sourceforge.net/
-BuildRequires:	plib >= 1.7.0-2
+BuildRequires:	plib > 1.7.0-1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define _prefix /usr/X11R6
