@@ -11,13 +11,21 @@ Release:	0.1
 License:	GPL	
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src.tgz
+# Source0-md5:	5e43742b252f1e96f8d93da82b8f9fbb
 Source1:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src-robots-base.tgz
+# Source1-md5:	f21e4e88c2d6982efb28798d02b1c491
 Source2:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src-robots-berniw.tgz
+# Source2-md5:	df4588752f50eedee7aa0d6f5df74036
 Source3:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src-robots-K1999.tgz
+# Source3-md5:	ee6a5f0099723087585d1295a2d3b48d
 Source4:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data.tgz
+# Source4-md5:	b7c8729b122d1a3bc1fc563783828d12
 Source5:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-tracks-base.tgz
+# Source5-md5:	afb991a29f875e2030f2ad24d82d2c22
 Source6:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-extra.tgz
+# Source6-md5:	1b96f6f9eedda8d1857f9bd112664ab6
 Source7:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-Patwo-Design.tgz
+# Source7-md5:	dddb6ffec22c15a9f8c60d0c69a806cf
 Patch0:		%{name}-inc.patch
 URL:		http://torcs.sourceforge.net/
 BuildRequires:	plib > 1.7.0-1
