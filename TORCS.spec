@@ -56,7 +56,9 @@ CFLAGS="-I/usr/X11R6/include"; export CFLAGS
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
 cp -rf data cars categories tracks menu $RPM_BUILD_ROOT%{_datadir}/games/torcs
 
 %clean
