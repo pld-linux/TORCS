@@ -50,6 +50,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glut-devel >= 3.7
 BuildRequires:	libpng-devel
+BuildRequires:	libstdc++-devel
 BuildRequires:	plib-devel >= 1.8.0
 BuildRequires:	zlib-devel
 Requires:	%{name}-data = %{version}-%{release}
