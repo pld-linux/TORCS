@@ -50,7 +50,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glut-devel >= 3.7
 BuildRequires:	libpng-devel
-BuildRequires:	plib-devel > 1.7.0-1
+BuildRequires:	plib > 1.7.0-1
 BuildRequires:	zlib-devel
 Requires:	OpenGL
 Requires:	%{name}-data = %{version}-%{release}
