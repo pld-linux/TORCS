@@ -1,13 +1,11 @@
-# ToDo:
-# - make it compile - this one is horrible, it creates exports/include dir
-#   in top source directory and puts symlinks to various *.h files there.
-#   However, it does not put symlinks to plib/*.h or GL/*.h. Anyone knows
-#   how to fix it? Or maybe this one should be removed from repo?
+# TODO:
+#	- make subpackages
+#
 Summary:	The Open Racing Car Simulator
 Summary(pl):	The Open Racing Car Simulator - symulator wy¶cigów samochodowych
 Name:		TORCS
 Version:	1.2.1
-Release:	0.2
+Release:	0.3
 License:	GPL	
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src.tgz
@@ -26,6 +24,7 @@ Source6:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-extra.tgz
 # Source6-md5:	1b96f6f9eedda8d1857f9bd112664ab6
 Source7:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-Patwo-Design.tgz
 # Source7-md5:	dddb6ffec22c15a9f8c60d0c69a806cf
+Source8:	%{name}.desktop
 Patch0:		%{name}-inc.patch
 Patch1:		%{name}-compile_fix.patch
 URL:		http://torcs.sourceforge.net/
@@ -56,12 +55,13 @@ CFLAGS="-I/usr/X11R6/include"; export CFLAGS
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Games/Racing
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 cp -rf data cars categories tracks menu $RPM_BUILD_ROOT%{_datadir}/games/torcs
+install %{SOURCE8} $RPM_BUILD_ROOT%{_applnkdir}/Games/Racing
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -84,3 +84,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/games/torcs/tracks
 %{_datadir}/games/torcs/setup_linux.sh
 %attr(755,root,root) %{_datadir}/games/torcs/torcs
+%{_applnkdir}/Games/Racing/*
