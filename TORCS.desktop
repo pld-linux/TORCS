@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=TORCS
+Comment=The Open Racing Car Simulator
+Comment[pl]=Otwarty Symulator Wyścigów Samochodowych 
+Exec=torcs
+Terminal=0
+Type=Application
+# vi: encoding=utf-8
