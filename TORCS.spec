@@ -2,7 +2,7 @@ Summary:	The Open Racing Car Simulator
 Summary(pl):	The Open Racing Car Simulator - symulator wy¶cigów samochodowych
 Name:		TORCS
 Version:	1.2.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src.tgz
@@ -140,13 +140,13 @@ CFLAGS="-I/usr/X11R6/include"; export CFLAGS
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games/Racing,%{_pixmapsdir}}
+install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 cp -rf data cars categories tracks menu $RPM_BUILD_ROOT%{_datadir}/games/torcs
-install %{SOURCE8} $RPM_BUILD_ROOT%{_applnkdir}/Games/Racing
+install %{SOURCE8} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE9} $RPM_BUILD_ROOT%{_pixmapsdir}
 
 find $RPM_BUILD_ROOT%{_datadir}/games/torcs -name "Makefile" -exec rm -f {} \;
@@ -164,7 +164,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/games/torcs/modules
 %{_datadir}/games/torcs/setup_linux.sh
 %attr(755,root,root) %{_datadir}/games/torcs/torcs
-%{_applnkdir}/Games/Racing/*
+%{_desktopdir}/*
 %{_pixmapsdir}/*
 
 %files data
