@@ -2,7 +2,7 @@ Summary:	The Open Racing Car Simulator
 Summary(pl):	The Open Racing Car Simulator - symulator wy¶cigów samochodowych
 Name:		TORCS
 Version:	1.2.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src.tgz
