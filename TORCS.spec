@@ -7,7 +7,7 @@ Summary:	The Open Racing Car Simulator
 Summary(pl):	The Open Racing Car Simulator - symulator wy¶cigów samochodowych
 Name:		TORCS
 Version:	1.2.1
-Release:	0.1
+Release:	0.2
 License:	GPL	
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src.tgz
@@ -27,6 +27,7 @@ Source6:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-extra.tgz
 Source7:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-Patwo-Design.tgz
 # Source7-md5:	dddb6ffec22c15a9f8c60d0c69a806cf
 Patch0:		%{name}-inc.patch
+Patch1:		%{name}-compile_fix.patch
 URL:		http://torcs.sourceforge.net/
 BuildRequires:	plib > 1.7.0-1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -42,6 +43,7 @@ The Open Racing Car Simulator - symulator wy¶cigów samochodowych.
 mv torcs-%{version}/src/drivers/* src/drivers
 rm -r torcs-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 CPPFLAGS="-I/usr/X11R6/include"; export CPPFLAGS
