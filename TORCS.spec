@@ -58,8 +58,16 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGELOG.html README.linux
 %attr(755,root,root) %{_bindir}/*
-%dir %{_datadir}/games
-%dir %{_datadir}/games/torcs
-%{_datadir}/games/torcs/*
+%{_datadir}/games/torcs/cars/
+%{_datadir}/games/torcs/categories/
+%{_datadir}/games/torcs/config/
+%{_datadir}/games/torcs/data/
+%{_datadir}/games/torcs/drivers/
+%{_datadir}/games/torcs/menu/
+%{_datadir}/games/torcs/modules/
+%{_datadir}/games/torcs/results/
+%{_datadir}/games/torcs/telemetry/
+%{_datadir}/games/torcs/tracks/
+%{_datadir}/games/torcs/setup_linux.sh
 %attr(755,root,root) %{_datadir}/games/torcs/torcs
 %{_libdir}/lib*.so
