@@ -7,5 +7,5 @@ Terminal=false
 Icon=TORCS.png
 Type=Application
 Encoding=UTF-8
-Categories=Application;Game;X-RacingGame;
+Categories=Game;X-RacingGame;
 # vi: encoding=utf-8
