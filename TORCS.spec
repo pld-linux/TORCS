@@ -18,7 +18,9 @@ Source4:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data.tgz
 Source5:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-tracks-base.tgz
 Source6:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-extra.tgz
 Source7:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-Patwo-Design.tgz
+Patch0:		%{name}-inc.patch
 URL:		http://torcs.sourceforge.net/
+BuildRequires:	plib >= 1.7.0-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define _prefix /usr/X11R6
@@ -28,7 +30,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description -l pl
 
 %prep
-%setup -q -n torcs-1.2.0 -a 2 4 5 6
+%setup -q -n torcs-1.2.0 -a1 -a2 -a3 -a4 -a5 -a6
+mv torcs-1.2.0/src/drivers/* src/drivers
+rm -r torcs-1.2.0
+%patch0 -p1
 
 %build
 CPPFLAGS="-I/usr/X11R6/include"; export CPPFLAGS
@@ -44,12 +49,17 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
+cp -rf data cars categories tracks menu $RPM_BUILD_ROOT%{_datadir}/games/torcs
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README
+%doc CHANGELOG.html README.linux
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/%{name}
+%dir %{_datadir}/games
+%dir %{_datadir}/games/torcs
+%{_datadir}/games/torcs/*
+%attr(755,root,root) %{_datadir}/games/torcs/torcs
+%{_libdir}/lib*.so
