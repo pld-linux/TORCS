@@ -1,15 +1,16 @@
---- torcs-1.2.0/Make-config.in.fix      Thu Apr  3 03:05:59 2003
-+++ torcs-1.2.0/Make-config.in  Thu Apr  3 03:06:45 2003
-@@ -50,10 +50,10 @@
+--- torcs-1.2.0/Make-config.in.orig	Sat Mar 29 23:08:41 2003
++++ torcs-1.2.0/Make-config.in	Thu Apr  3 11:00:43 2003
+@@ -50,10 +50,11 @@
  #EXT_LIBS = -lpthread @LIBS@
  EXT_LIBS = @LIBS@
  #LDFLAGS =  @LDFLAGS@ -L${EXPORTBASE}/lib -L/usr/lib -L/usr/local/lib
--LDFLAGS +=  @LDFLAGS@ -L${EXPORTBASE}/lib -L/usr/lib
+-LDFLAGS +=  @LDFLAGS@ -L${EXPORTBASE}/lib -L/usr/lib 
 +LDFLAGS +=  @LDFLAGS@ -L${EXPORTBASE}/lib -L/usr/lib -L/usr/X11R6/lib
-
- #INCFLAGS =  -I${EXPORTBASE}/include -I/usr/include
--I/usr/local/include-INCFLAGS =  -I${EXPORTBASE}/include
+ 
+ #INCFLAGS =  -I${EXPORTBASE}/include -I/usr/include -I/usr/local/include
+-INCFLAGS =  -I${EXPORTBASE}/include 
++#INCFLAGS =  -I${EXPORTBASE}/include 
 +INCFLAGS =  -I${EXPORTBASE}/include -I/usr/include -I/usr/X11R6/include
-
+ 
  CPP = @CPP@ $(CPPFLAGS) -M -D__DEPEND__
-
+ 
