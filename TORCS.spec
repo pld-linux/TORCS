@@ -26,6 +26,8 @@ Source9:	%{name}.png
 Patch0:		%{name}-inc.patch
 Patch1:		%{name}-compile_fix.patch
 URL:		http://torcs.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	plib-devel > 1.7.0-1
 Requires:	%{name}-data = %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
