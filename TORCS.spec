@@ -4,7 +4,7 @@
 #   However, it does not put symlinks to plib/*.h or GL/*.h. Anyone knows
 #   how to fix it? Or maybe this one should be removed from repo?
 Summary:	The Open Racing Car Simulator
-Summary(pl):	The Open Racing Car Simulator
+Summary(pl):	The Open Racing Car Simulator - symulator wy¶cigów samochodowych
 Name:		TORCS
 Version:	1.2.0
 Release:	0.1
@@ -23,11 +23,11 @@ URL:		http://torcs.sourceforge.net/
 BuildRequires:	plib > 1.7.0-1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define _prefix /usr/X11R6
-
 %description
+The Open Racing Car Simulator.
 
 %description -l pl
+The Open Racing Car Simulator - symulator wy¶cigów samochodowych.
 
 %prep
 %setup -q -n torcs-1.2.0 -a1 -a2 -a3 -a4 -a5 -a6
@@ -41,7 +41,7 @@ CFLAGS="-I/usr/X11R6/include"; export CFLAGS
 %{__aclocal}
 %{__autoconf}
 %configure \
-	--x-includes=%{_prefix}/include
+	--x-includes=/usr/X11R6/include
 %{__make}
 
 %install
@@ -58,17 +58,17 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGELOG.html README.linux
 %attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_libdir}/lib*.so
 %dir %{_datadir}/games/torcs
-%{_datadir}/games/torcs/cars/
-%{_datadir}/games/torcs/categories/
-%{_datadir}/games/torcs/config/
-%{_datadir}/games/torcs/data/
-%{_datadir}/games/torcs/drivers/
-%{_datadir}/games/torcs/menu/
-%{_datadir}/games/torcs/modules/
-%{_datadir}/games/torcs/results/
-%{_datadir}/games/torcs/telemetry/
-%{_datadir}/games/torcs/tracks/
+%{_datadir}/games/torcs/cars
+%{_datadir}/games/torcs/categories
+%{_datadir}/games/torcs/config
+%{_datadir}/games/torcs/data
+%{_datadir}/games/torcs/drivers
+%{_datadir}/games/torcs/menu
+%{_datadir}/games/torcs/modules
+%{_datadir}/games/torcs/results
+%{_datadir}/games/torcs/telemetry
+%{_datadir}/games/torcs/tracks
 %{_datadir}/games/torcs/setup_linux.sh
 %attr(755,root,root) %{_datadir}/games/torcs/torcs
-%{_libdir}/lib*.so
