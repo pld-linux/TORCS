@@ -31,8 +31,8 @@ The Open Racing Car Simulator - symulator wy¶cigów samochodowych.
 
 %prep
 %setup -q -n torcs-%{version} -a1 -a2 -a3 -a4 -a5 -a6
-mv torcs-1.2.0/src/drivers/* src/drivers
-rm -r torcs-1.2.0
+mv torcs-%{version}/src/drivers/* src/drivers
+rm -r torcs-%{version}
 %patch0 -p1
 
 %build
