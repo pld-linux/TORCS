@@ -3,7 +3,7 @@ Summary(pl):	The Open Racing Car Simulator - symulator wy¶cigów samochodowych
 Name:		TORCS
 Version:	1.2.1
 Release:	1
-License:	GPL	
+License:	GPL
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src.tgz
 # Source0-md5:	5e43742b252f1e96f8d93da82b8f9fbb
@@ -41,10 +41,10 @@ Summary:	Data files for TORCS
 Summary(pl):	Pliki z danymi dla TORCS
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}
-                                                                                
+
 %description data
 Data files for TORCS.
-                                                                                
+
 %description data -l pl
 Pliki z danymi dla TORCS.
 
@@ -53,10 +53,10 @@ Summary:	Base tracks data files for TORCS
 Summary(pl):	Bazowe pliki z danymi o trasach dla TORCS
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}
-                                                                                
+
 %description data-tracks-base
 Base tracks data files for TORCS.
-                                                                                
+
 %description data-tracks-base -l pl
 Bazowe pliki z danymi o trasach dla TORCS.
 
@@ -65,10 +65,10 @@ Summary:	Extra cars data files for TORCS
 Summary(pl):	Dodatkowe pliki z danymi o samochodach dla TORCS
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}
-                                                                                
+
 %description data-cars-extra
 Extra cars data files for TORCS.
-                                                                                
+
 %description data-cars-extra -l pl
 Bazowe pliki z danymi o trasach dla TORCS.
 
@@ -77,10 +77,10 @@ Summary:	Patwo-Design cars data files for TORCS
 Summary(pl):	Pliki z danymi o samochodach dla TORCS - Patwo-Design
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}
-                                                                                
+
 %description data-cars-Patwo-Design
 Patwo-Design cars data files for TORCS.
-                                                                                
+
 %description data-cars-Patwo-Design -l pl
 Pliki z danymi o samochodach dla TORCS - Patwo-Design.
 
@@ -89,10 +89,10 @@ Summary:	Base robots files for TORCS
 Summary(pl):	Podstawowe pliki komputerowych kierowców dla TORCS
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}
-                                                                                
+
 %description robots-base
 Base robots files for TORCS.
-                                                                                
+
 %description robots-base -l pl
 Podstawowe pliki komputerowych kierowców dla TORCS.
 
@@ -101,10 +101,10 @@ Summary:	Berniw robots files for TORCS
 Summary(pl):	Pliki komputerowych kierowców dla TORCS - Berniw
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}
-                                                                                
+
 %description robots-berniw
 Berniw robots files for TORCS.
-                                                                                
+
 %description robots-berniw -l pl
 Pliki komputerowych kierowców dla TORCS - Berniw.
 
@@ -113,10 +113,10 @@ Summary:	K1999 robots files for TORCS
 Summary(pl):	Pliki komputerowych kierowców dla TORCS - K1999
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}
-                                                                                
+
 %description robots-K1999
 K1999 robots files for TORCS.
-                                                                                
+
 %description robots-K1999 -l pl
 Pliki komputerowych kierowców dla TORCS - K1999.
 
