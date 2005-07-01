@@ -52,6 +52,9 @@ BuildRequires:	zlib-devel
 Requires:	%{name}-data = %{version}-%{release}
 Requires:	OpenGL
 Requires:	plib >= 1.8.3
+Obsoletes:	TORCS-robots-K1999
+Obsoletes:	TORCS-robots-astigot
+Obsoletes:	TORCS-robots-billy
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_noautoreqdep	libGL.so.1 libGLU.so.1
