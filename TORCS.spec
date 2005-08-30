@@ -1,46 +1,47 @@
 Summary:	The Open Racing Car Simulator
 Summary(pl):	The Open Racing Car Simulator - symulator wy¶cigów samochodowych
 Name:		TORCS
-Version:	1.2.3
+Version:	1.2.4
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src.tgz
-# Source0-md5:	0f1dc6a3f08e1ae9f80e118c350bb4b4
+# Source0-md5:	f5b41bf29cb7b6160e5ead6e187380b6
 Source1:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src-robots-base.tgz
-# Source1-md5:	43d670da19adb2e4c632390611d2dc31
+# Source1-md5:	3afe0d23f1e637fe56efccd2b6e8a8f1
 Source2:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src-robots-berniw.tgz
-# Source2-md5:	ba4f75b0707a592cb18ea971da8c1382
+# Source2-md5:	40aed9595f91051e8468e8a19b65f809
 Source3:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src-robots-bt.tgz
-# Source3-md5:	605d82faeb3d547ccb9acbbac9281ff9
+# Source3-md5:	337eecc6e545aceda094d945e12c3023
 Source4:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src-robots-olethros.tgz
-# Source4-md5:	2cd15c851a6f07410a4363114a5b2880
+# Source4-md5:	13b1eeba1148ca57dc1d989fcb27d308
 Source5:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data.tgz
-# Source5-md5:	aad3396e3524dc24436225fe119a1fcf
+# Source5-md5:	0129c5c930bbc830964bd32024f9a47d
 Source6:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-tracks-dirt.tgz
-# Source6-md5:	ff3e6b722311b637afec8087968c0958
+# Source6-md5:	2464de31150f97da54d9e7609ca125fe
 Source7:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-tracks-oval.tgz
-# Source7-md5:	f245ac621677371dec762703d681d000
+# Source7-md5:	b7ddc6ad362bfafc6f66cfcc459ec30b
 Source8:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-tracks-road.tgz
-# Source8-md5:	3a9409d67e2e57a260cd62fd7a60c19b
+# Source8-md5:	9084b2700d71f86fedfc7a5f55959b0b
 Source9:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-extra.tgz
-# Source9-md5:	143bd1dd82c22170604b7d504e1d8811
+# Source9-md5:	f11f0789885fe427f7b8958a17cc9f52
 Source10:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-kcendra-gt.tgz
-# Source10-md5:	f4ea43e00e5bca9db8ff3a8e25a669e9
+# Source10-md5:	fd91d2812aeab050d0a4c85927ba7955
 Source11:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-kcendra-roadsters.tgz
-# Source11-md5:	a260b13b2be08417cb5a0fca6a663bd2
+# Source11-md5:	40f495c44416d2154b8533f8e32a5a05
 Source12:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-kcendra-sport.tgz
-# Source12-md5:	6315a8961a4f020b303cf9e820b342ca
+# Source12-md5:	c484d9be5b49a4820aeb5486b4cb4c49
 Source13:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-nascar.tgz
-# Source13-md5:	4ff4e4caabcdfe23d9cba7f50db6b87a
+# Source13-md5:	30e3ab4da6c503a6a7ba6eaf2898ede0
 Source14:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-Patwo-Design.tgz
-# Source14-md5:	b3d09f66ef85f8dfe46ae7766cd6119e
+# Source14-md5:	42abef979a298dd829b7f41e025d6365
 Source15:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-VM.tgz
-# Source15-md5:	8606ae6d589f6310ab715ac412d6463f
+# Source15-md5:	328a9bef7b1c81078dfe5ec3c968ddbc
 Source16:	%{name}.desktop
 Source17:	%{name}.png
 Patch0:		%{name}-inc.patch
 URL:		http://www.torcs.org/
+BuildRequires:	OpenAL-devel
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -50,6 +51,7 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	plib-devel >= 1.8.3
 BuildRequires:	zlib-devel
 Requires:	%{name}-data = %{version}-%{release}
+Requires:	OpenAL
 Requires:	OpenGL
 Requires:	plib >= 1.8.3
 Obsoletes:	TORCS-robots-K1999
