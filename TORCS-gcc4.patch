@@ -1,0 +1,12 @@
+diff -urN torcs-1.2.4/src/modules/graphic/ssggraph/grscreen.h torcs-1.2.4.new/src/modules/graphic/ssggraph/grscreen.h
+--- torcs-1.2.4/src/modules/graphic/ssggraph/grscreen.h	2005-08-24 21:19:47.000000000 +0200
++++ torcs-1.2.4.new/src/modules/graphic/ssggraph/grscreen.h	2006-04-17 18:13:35.000000000 +0200
+@@ -78,7 +78,7 @@
+ 
+     void update(tSituation *s, float Fps);
+ 
+-    void cGrScreen::camDraw(tSituation *s);
++    void camDraw(tSituation *s);
+ 
+     void updateCurrent(tSituation *s);
+ 
