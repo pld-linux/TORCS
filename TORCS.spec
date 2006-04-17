@@ -39,20 +39,22 @@ Source15:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-VM.tgz
 # Source15-md5:	328a9bef7b1c81078dfe5ec3c968ddbc
 Source16:	%{name}.desktop
 Source17:	%{name}.png
-Patch0:		%{name}-inc.patch
+Patch0:		%{name}-link.patch
+Patch1:		%{name}-gcc4.patch
 URL:		http://www.torcs.org/
-BuildRequires:	OpenAL-devel
-BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	glut-devel >= 3.7
+BuildRequires:	freealut-devel
+BuildRequires:	glut-devel >= 3.7-14
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	plib-devel >= 1.8.3
+BuildRequires:	xorg-lib-libXrandr-devel
+BuildRequires:	xorg-lib-libXxf86vm-devel
 BuildRequires:	zlib-devel
 Requires:	%{name}-data = %{version}-%{release}
-Requires:	OpenAL
 Requires:	OpenGL
+Requires:	freealut
 Requires:	plib >= 1.8.3
 Obsoletes:	TORCS-robots-K1999
 Obsoletes:	TORCS-robots-astigot
@@ -261,14 +263,12 @@ Pliki komputerowych kierowców dla TORCS - olethros.
 mv torcs-%{version}/src/drivers/* src/drivers
 rm -r torcs-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
-CPPFLAGS="-I/usr/X11R6/include"; export CPPFLAGS
-CFLAGS="-I/usr/X11R6/include"; export CFLAGS
 %{__aclocal}
 %{__autoconf}
-%configure \
-	--x-includes=/usr/X11R6/include
+%configure
 %{__make}
 
 %install
