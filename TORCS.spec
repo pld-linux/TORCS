@@ -307,7 +307,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/torcs/modules/track/*.so
 %dir %{_datadir}/games/torcs
 %{_datadir}/games/torcs/config
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}/*
 
 %files data
