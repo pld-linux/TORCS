@@ -1,5 +1,5 @@
 Summary:	The Open Racing Car Simulator
-Summary(pl):	The Open Racing Car Simulator - symulator wy禼ig體 samochodowych
+Summary(pl.UTF-8):   The Open Racing Car Simulator - symulator wy艣cig贸w samochodowych
 Name:		TORCS
 Version:	1.3.0
 Release:	1
@@ -65,12 +65,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 The Open Racing Car Simulator.
 
-%description -l pl
-The Open Racing Car Simulator - symulator wy禼ig體 samochodowych.
+%description -l pl.UTF-8
+The Open Racing Car Simulator - symulator wy艣cig贸w samochodowych.
 
 %package data
 Summary:	Data files for TORCS
-Summary(pl):	Pliki z danymi dla TORCS
+Summary(pl.UTF-8):   Pliki z danymi dla TORCS
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
 Requires:	%{name}-data-cars-extra = %{version}-%{release}
@@ -80,60 +80,60 @@ Requires:	%{name}-robots-base = %{version}-%{release}
 %description data
 Data files for TORCS.
 
-%description data -l pl
+%description data -l pl.UTF-8
 Pliki z danymi dla TORCS.
 
 %package data-tracks-road
 Summary:	Road-circuit tracks for TORCS
-Summary(pl):	Trasy dla TORCS
+Summary(pl.UTF-8):   Trasy dla TORCS
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
 
 %description data-tracks-road
 Base tracks data files for TORCS.
 
-%description data-tracks-road -l pl
+%description data-tracks-road -l pl.UTF-8
 Trasy dla TORCS.
 
 %package data-tracks-oval
 Summary:	Oval-like tracks for TORCS
-Summary(pl):	Trasy owalne dla TORCS
+Summary(pl.UTF-8):   Trasy owalne dla TORCS
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
 
 %description data-tracks-oval
 Oval-like tracks for TORCS.
 
-%description data-tracks-oval -l pl
+%description data-tracks-oval -l pl.UTF-8
 Trasy owalne dla TORCS.
 
 %package data-tracks-dirt
 Summary:	Dirt tracks for TORCS
-Summary(pl):	Trasy szutrowe dla TORCS
+Summary(pl.UTF-8):   Trasy szutrowe dla TORCS
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
 
 %description data-tracks-dirt
 Dirt tracks for TORCS.
 
-%description data-tracks-dirt -l pl
+%description data-tracks-dirt -l pl.UTF-8
 Trasy szutrowe dla TORCS.
 
 %package data-cars-extra
 Summary:	Recommended cars for TORCS
-Summary(pl):	Zalecane samochody dla TORCS
+Summary(pl.UTF-8):   Zalecane samochody dla TORCS
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
 
 %description data-cars-extra
 Recommended cars for TORCS.
 
-%description data-cars-extra -l pl
+%description data-cars-extra -l pl.UTF-8
 Zalecane samochody dla TORCS.
 
 %package data-cars-nascar
 Summary:	Nascar cars for TORCS
-Summary(pl):	Samochody Nascar dla TORCS
+Summary(pl.UTF-8):   Samochody Nascar dla TORCS
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
 Requires:	%{name}-data-cars-extra = %{version}-%{release}
@@ -141,12 +141,12 @@ Requires:	%{name}-data-cars-extra = %{version}-%{release}
 %description data-cars-nascar
 Nascar cars for TORCS.
 
-%description data-cars-nascar -l pl
+%description data-cars-nascar -l pl.UTF-8
 Samochody Nascar dla TORCS.
 
 %package data-cars-Patwo-Design
 Summary:	Rally cars for TORCS
-Summary(pl):	Samochody rajdowe dla TORCS
+Summary(pl.UTF-8):   Samochody rajdowe dla TORCS
 License:	distributable (see readme.txt)
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
@@ -154,12 +154,12 @@ Requires:	%{name} = %{version}-%{release}
 %description data-cars-Patwo-Design
 Rally cars for TORCS.
 
-%description data-cars-Patwo-Design -l pl
+%description data-cars-Patwo-Design -l pl.UTF-8
 Samochody rajdowe dla TORCS.
 
 %package data-cars-kcendra-gt
 Summary:	GT cars from the 60's for TORCS
-Summary(pl):	Samochody GT z lat 60' dla TORCS
+Summary(pl.UTF-8):   Samochody GT z lat 60' dla TORCS
 License:	distributable (see readme.txt)
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
@@ -167,12 +167,12 @@ Requires:	%{name} = %{version}-%{release}
 %description data-cars-kcendra-gt
 GT cars from the 60's for TORCS.
 
-%description data-cars-kcendra-gt -l pl
+%description data-cars-kcendra-gt -l pl.UTF-8
 Samochody GT z lat 60' dla TORCS.
 
 %package data-cars-kcendra-roadsters
 Summary:	Roadsters from the 60's for TORCS
-Summary(pl):	Samochody Roadsters z lat 60' dla TORCS
+Summary(pl.UTF-8):   Samochody Roadsters z lat 60' dla TORCS
 License:	distributable (see readme.txt)
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
@@ -180,12 +180,12 @@ Requires:	%{name} = %{version}-%{release}
 %description data-cars-kcendra-roadsters
 Roadsters from the 60's for TORCS.
 
-%description data-cars-kcendra-roadsters -l pl
+%description data-cars-kcendra-roadsters -l pl.UTF-8
 Samochody Roadsters z lat 60' dla TORCS.
 
 %package data-cars-kcendra-sport
 Summary:	Sport cars from the 60's for TORCS
-Summary(pl):	Samochody sportowe z lat 60' dla TORCS
+Summary(pl.UTF-8):   Samochody sportowe z lat 60' dla TORCS
 License:	distributable (see readme.txt)
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
@@ -193,12 +193,12 @@ Requires:	%{name} = %{version}-%{release}
 %description data-cars-kcendra-sport
 Sport cars from the 60's for TORCS.
 
-%description data-cars-kcendra-sport -l pl
+%description data-cars-kcendra-sport -l pl.UTF-8
 Samochody sportowe z lat 60' dla TORCS.
 
 %package data-cars-VM
 Summary:	Race cars for TORCS
-Summary(pl):	Samochody wy禼igowe dla TORCS
+Summary(pl.UTF-8):   Samochody wy艣cigowe dla TORCS
 License:	distributable (see readme.txt)
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
@@ -206,56 +206,56 @@ Requires:	%{name} = %{version}-%{release}
 %description data-cars-VM
 Race cars for TORCS.
 
-%description data-cars-VM -l pl
-Samochody wy禼igowe dla TORCS.
+%description data-cars-VM -l pl.UTF-8
+Samochody wy艣cigowe dla TORCS.
 
 %package robots-base
 Summary:	Base robots files for TORCS
-Summary(pl):	Podstawowe pliki komputerowych kierowc體 dla TORCS
+Summary(pl.UTF-8):   Podstawowe pliki komputerowych kierowc贸w dla TORCS
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
 
 %description robots-base
 Base robots files for TORCS.
 
-%description robots-base -l pl
-Podstawowe pliki komputerowych kierowc體 dla TORCS.
+%description robots-base -l pl.UTF-8
+Podstawowe pliki komputerowych kierowc贸w dla TORCS.
 
 %package robots-berniw
 Summary:	Berniw robots files for TORCS
-Summary(pl):	Pliki komputerowych kierowc體 dla TORCS - Berniw
+Summary(pl.UTF-8):   Pliki komputerowych kierowc贸w dla TORCS - Berniw
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
 
 %description robots-berniw
 Berniw robots files for TORCS.
 
-%description robots-berniw -l pl
-Pliki komputerowych kierowc體 dla TORCS - Berniw.
+%description robots-berniw -l pl.UTF-8
+Pliki komputerowych kierowc贸w dla TORCS - Berniw.
 
 %package robots-bt
 Summary:	Bt robots files for TORCS
-Summary(pl):	Pliki komputerowych kierowc體 dla TORCS - bt
+Summary(pl.UTF-8):   Pliki komputerowych kierowc贸w dla TORCS - bt
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
 
 %description robots-bt
 Bt robots files for TORCS.
 
-%description robots-bt -l pl
-Pliki komputerowych kierowc體 dla TORCS - bt.
+%description robots-bt -l pl.UTF-8
+Pliki komputerowych kierowc贸w dla TORCS - bt.
 
 %package robots-olethros
 Summary:	Olethros robots files for TORCS
-Summary(pl):	Pliki komputerowych kierowc體 dla TORCS - olethros
+Summary(pl.UTF-8):   Pliki komputerowych kierowc贸w dla TORCS - olethros
 Group:		X11/Applications/Games
 Requires:	%{name} = %{version}-%{release}
 
 %description robots-olethros
 Olethros robots files for TORCS.
 
-%description robots-olethros -l pl
-Pliki komputerowych kierowc體 dla TORCS - olethros.
+%description robots-olethros -l pl.UTF-8
+Pliki komputerowych kierowc贸w dla TORCS - olethros.
 
 %prep
 %setup -q -n torcs-%{version} -a1 -a2 -a3 -a4 -a5 -a6 -a7 -a8 -a9 -a10 -a11 -a12 -a13 -a14 -a15
