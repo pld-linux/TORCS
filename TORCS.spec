@@ -38,9 +38,9 @@ Source14:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-Patwo-Des
 Source15:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-VM.tgz
 # Source15-md5:	c58aeff1bb7fb8a100e06cfdfa65d9e6
 Source16:	%{name}.desktop
-Source17:	%{name}.png
 Patch0:		%{name}-link.patch
 Patch1:		%{name}-asneeded.patch
+Patch2:		%{name}-default-plib.patch
 URL:		http://www.torcs.org/
 BuildRequires:	OpenGL-glut-devel
 BuildRequires:	autoconf
@@ -264,6 +264,7 @@ mv torcs-%{version}/src/drivers/* src/drivers
 rm -r torcs-%{version}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__aclocal}
@@ -280,7 +281,7 @@ install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
 cp -rf data cars categories tracks menu $RPM_BUILD_ROOT%{_datadir}/games/torcs
 install %{SOURCE16} $RPM_BUILD_ROOT%{_desktopdir}
-install %{SOURCE17} $RPM_BUILD_ROOT%{_pixmapsdir}
+install logo-skinner-trans.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
 
 find $RPM_BUILD_ROOT%{_datadir}/games/torcs -name "Makefile" -exec rm -f {} \;
 
