@@ -40,11 +40,12 @@ Source15:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-VM.tgz
 Source16:	%{name}.desktop
 Source17:	%{name}.png
 Patch0:		%{name}-link.patch
+Patch1:		%{name}-asneeded.patch
 URL:		http://www.torcs.org/
+BuildRequires:	OpenGL-glut-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	freealut-devel
-BuildRequires:	glut-devel >= 3.7-14
 BuildRequires:	libpng-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	plib-devel >= 1.8.3
@@ -262,6 +263,7 @@ Pliki komputerowych kierowców dla TORCS - olethros.
 mv torcs-%{version}/src/drivers/* src/drivers
 rm -r torcs-%{version}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__aclocal}
