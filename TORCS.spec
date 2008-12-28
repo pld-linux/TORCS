@@ -1,41 +1,41 @@
 Summary:	The Open Racing Car Simulator
 Summary(pl.UTF-8):	The Open Racing Car Simulator - symulator wyścigów samochodowych
 Name:		TORCS
-Version:	1.3.0
-Release:	2
+Version:	1.3.1
+Release:	0.1
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src.tgz
-# Source0-md5:	915c89f9d3618d13dddd5bfb4d199539
+# Source0-md5:	91f2296213fbfb1f1971dee7535af9bc
 Source1:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src-robots-base.tgz
-# Source1-md5:	da007d61447f38fbdbd22aec029cc26c
-Source2:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src-robots-berniw.tgz
+# Source1-md5:	cf3cc25f774c1793446af432ff9fc704
+Source2:	http://dl.sourceforge.net/torcs/%{name}-1.3.0-src-robots-berniw.tgz
 # Source2-md5:	abeb72ba3913ef0bde727fdaa9699eef
-Source3:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src-robots-bt.tgz
+Source3:	http://dl.sourceforge.net/torcs/%{name}-1.3.0-src-robots-bt.tgz
 # Source3-md5:	ca8506aecc30bee308a5e198304b71b2
-Source4:	http://dl.sourceforge.net/torcs/%{name}-%{version}-src-robots-olethros.tgz
+Source4:	http://dl.sourceforge.net/torcs/%{name}-1.3.0-src-robots-olethros.tgz
 # Source4-md5:	227d47687b821298fe6b2f147071e73f
 Source5:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data.tgz
-# Source5-md5:	8bff8540f7994dce02d32ba8fb4ad8a8
+# Source5-md5:	36f9676bf2f9135a3cdb02ac49896cc3
 Source6:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-tracks-dirt.tgz
-# Source6-md5:	7c1d5dab87d6c06ac8e7ba8bab30f0b1
+# Source6-md5:	009d929b9d1ac6173be4045371501a94
 Source7:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-tracks-oval.tgz
-# Source7-md5:	a27ce8b505dfbf2caba91ac6cc802bab
+# Source7-md5:	807c231b5f02b96c937b5155ae188b02
 Source8:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-tracks-road.tgz
-# Source8-md5:	8e30d3cc03dafb8392d690d96459f317
+# Source8-md5:	1017ed8df009870a8b05b8d274d0e3b6
 Source9:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-extra.tgz
-# Source9-md5:	248ae5c165f703b22bd7224d7c2caed4
+# Source9-md5:	008b4c48f1860ecad871871903a00979
 Source10:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-kcendra-gt.tgz
-# Source10-md5:	02fb83162e78ac52c4d8ea829e34f8b3
+# Source10-md5:	9deba2fcb7bf2f337ce6215ed2a4e70a
 Source11:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-kcendra-roadsters.tgz
-# Source11-md5:	b4c3399c5dab66d41790f00eec2c6bd3
+# Source11-md5:	6a920b7a41e4e22911d7fa620da9c153
 Source12:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-kcendra-sport.tgz
-# Source12-md5:	d6b67de89c964fb42b27d6fb777549bd
-Source13:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-nascar.tgz
+# Source12-md5:	8d39822830c0ccb5793911f3d0da901f
+Source13:	http://dl.sourceforge.net/torcs/%{name}-1.3.0-data-cars-nascar.tgz
 # Source13-md5:	40de51f6a929d121f46dd47709d58b8b
-Source14:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-Patwo-Design.tgz
+Source14:	http://dl.sourceforge.net/torcs/%{name}-1.3.0-data-cars-Patwo-Design.tgz
 # Source14-md5:	1b38279fb1e0c12ec256d26d6b17e1cc
-Source15:	http://dl.sourceforge.net/torcs/%{name}-%{version}-data-cars-VM.tgz
+Source15:	http://dl.sourceforge.net/torcs/%{name}-1.3.0-data-cars-VM.tgz
 # Source15-md5:	c58aeff1bb7fb8a100e06cfdfa65d9e6
 Source16:	%{name}.desktop
 Patch0:		%{name}-link.patch
@@ -270,13 +270,13 @@ rm -r torcs-%{version}
 %{__aclocal}
 %{__autoconf}
 %configure
-%{__make}
+%{__make} -j1
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}
 
-%{__make} install \
+%{__make} -j1 install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 cp -rf data cars categories tracks menu $RPM_BUILD_ROOT%{_datadir}/games/torcs
@@ -290,7 +290,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.linux
+%doc README
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/torcs
 %attr(755,root,root) %{_libdir}/torcs/*-bin
@@ -314,7 +314,7 @@ rm -rf $RPM_BUILD_ROOT
 %files data
 %defattr(644,root,root,755)
 %dir %{_datadir}/games/torcs/cars
-%{_datadir}/games/torcs/cars/360-modena
+#%{_datadir}/games/torcs/cars/360-modena
 %dir %{_datadir}/games/torcs/categories
 %{_datadir}/games/torcs/categories/free.xml
 %{_datadir}/games/torcs/categories/F1.xml
@@ -351,16 +351,23 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/games/torcs/cars/baja-bug
 %{_datadir}/games/torcs/cars/buggy
 %{_datadir}/games/torcs/cars/car1-trb1
-%{_datadir}/games/torcs/cars/clkdtm
-%{_datadir}/games/torcs/cars/gt40
-%{_datadir}/games/torcs/cars/lotus-gt1
-%{_datadir}/games/torcs/cars/mclaren-f1
+%{_datadir}/games/torcs/cars/car1-trb3
+%{_datadir}/games/torcs/cars/car2-trb1
+%{_datadir}/games/torcs/cars/car3-trb1
+%{_datadir}/games/torcs/cars/car4-trb1
+%{_datadir}/games/torcs/cars/car5-trb1
+%{_datadir}/games/torcs/cars/car6-trb1
+%{_datadir}/games/torcs/cars/car7-trb1
+#%{_datadir}/games/torcs/cars/clkdtm
+#%{_datadir}/games/torcs/cars/gt40
+#%{_datadir}/games/torcs/cars/lotus-gt1
+#%{_datadir}/games/torcs/cars/mclaren-f1
 %{_datadir}/games/torcs/cars/p406
-%{_datadir}/games/torcs/cars/porsche-gt1
-%{_datadir}/games/torcs/cars/porsche-gt3rs
+#%{_datadir}/games/torcs/cars/porsche-gt1
+#%{_datadir}/games/torcs/cars/porsche-gt3rs
 %{_datadir}/games/torcs/cars/sc-f1
-%{_datadir}/games/torcs/cars/viper-gts-r
-%{_datadir}/games/torcs/cars/xj-220
+#%{_datadir}/games/torcs/cars/viper-gts-r
+#%{_datadir}/games/torcs/cars/xj-220
 
 %files data-cars-nascar
 %defattr(644,root,root,755)
@@ -404,9 +411,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files robots-base
 %defattr(644,root,root,755)
-%{_datadir}/games/torcs/drivers/cylos1
-%dir %{_libdir}/torcs/drivers/cylos1
-%attr(755,root,root) %{_libdir}/torcs/drivers/cylos1/*.so
+#%{_datadir}/games/torcs/drivers/cylos1
+#%dir %{_libdir}/torcs/drivers/cylos1
+#%attr(755,root,root) %{_libdir}/torcs/drivers/cylos1/*.so
 %{_datadir}/games/torcs/drivers/damned
 %dir %{_libdir}/torcs/drivers/damned
 %attr(755,root,root) %{_libdir}/torcs/drivers/damned/*.so
@@ -416,9 +423,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/games/torcs/drivers/lliaw
 %dir %{_libdir}/torcs/drivers/lliaw
 %attr(755,root,root) %{_libdir}/torcs/drivers/lliaw/*.so
-%{_datadir}/games/torcs/drivers/tanhoj
-%dir %{_libdir}/torcs/drivers/tanhoj
-%attr(755,root,root) %{_libdir}/torcs/drivers/tanhoj/*.so
+#%{_datadir}/games/torcs/drivers/tanhoj
+#%dir %{_libdir}/torcs/drivers/tanhoj
+#%attr(755,root,root) %{_libdir}/torcs/drivers/tanhoj/*.so
 %{_datadir}/games/torcs/drivers/tita
 %dir %{_libdir}/torcs/drivers/tita
 %attr(755,root,root) %{_libdir}/torcs/drivers/tita/*.so
