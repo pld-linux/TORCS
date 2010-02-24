@@ -42,7 +42,7 @@ Patch0:		%{name}-link.patch
 Patch1:		%{name}-asneeded.patch
 Patch2:		%{name}-default-plib.patch
 URL:		http://www.torcs.org/
-BuildRequires:	OpenGL-glut-devel >= 4.0
+BuildRequires:	OpenGL-glut-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	freealut-devel
@@ -53,8 +53,7 @@ BuildRequires:	xorg-lib-libXrandr-devel
 BuildRequires:	xorg-lib-libXxf86vm-devel
 BuildRequires:	zlib-devel
 Requires:	%{name}-data = %{version}-%{release}
-Requires:	OpenGL-glut >= 4.0
-Requires:	freealut
+#Requires:	freealut
 Requires:	plib >= 1.8.3
 Obsoletes:	TORCS-robots-K1999
 Obsoletes:	TORCS-robots-astigot
